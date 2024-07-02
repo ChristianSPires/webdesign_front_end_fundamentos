@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>DESAFIO</h1>
+
+    <p>Dado um array contendo os dias da semana, mostre em um alert qual é o dia atual</p>
+
+    <script>
+        /*
+            let arr = new Array(1,2,3,4);
+                                ^ ^ ^ ^
+            Criamos um array com 4 posições.
+
+            arr = new Array(5);
+                            ^
+            Criamos um array vazio com 5 posições.
+
+            arr = [5];
+                   ^
+            Adicionamos o valor 5 ao primeiro indice do array
+        */
+
+        const weekDays = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+
+        let day = new Date().getDay();
+        
+        alert("Hoje é: " + weekDays[day]);
+        /*
+        let dia = new Date().getDay();
+
+        switch (dia) {
+            case 0:
+                alert("Today is Sunday");
+                break;
+            case 1:
+                alert("Today is Monday");
+                break;
+            case 0:
+                alert("Today is Tuesday");
+                break;
+            case 0:
+                alert("Today is Wednesday");
+                break;
+            case 0:
+                alert("Today is Thursday");
+                break;
+            case 0:
+                alert("Today is Friday");
+                break;
+            case 0:
+                alert("Today is Saturday");
+                break;
+        }
+        */
+    </script>
+</body>
+</html>
