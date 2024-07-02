@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VAMOS RESOLVER UM PROBLEMA?</h1>
+
+    <p>Dado um array de números, crie uma outra array contendo os números multiplicados por 2</p>
+
+    <script>
+        let nums = [1,2,3,4,5,6,7,8,9,10];
+        let multipliedNums = [];
+
+        for(let i = 0; i < nums.length; i++) {
+            multipliedNum = nums[i] * 2;
+            multipliedNums.push(multipliedNum);
+            document.write(nums[i] + " * 2 = " + multipliedNums[i] + "<br>");
+        }
+
+        document.write(multipliedNums);
+    </script>
+</body>
+</html>
