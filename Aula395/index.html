@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DESAFIO</h1>
+
+    <p>
+        Dado um array que pode conter valores de tipos diferentes, mostre num alert a soma de todos os números.
+    </p>
+
+    <script>
+        let weirdArray = ["teste", 1,2,3,"1","5","9", undefined, false]
+        let sumNumsArray = 0;
+
+        for(let i = 0; i <= (weirdArray.length - 1); i++) {
+            if(typeof weirdArray[i] === "number")  {
+                sumNumsArray += weirdArray[i];
+            }
+        }
+
+        alert(sumNumsArray);
+    </script>
+</body>
+</html>
