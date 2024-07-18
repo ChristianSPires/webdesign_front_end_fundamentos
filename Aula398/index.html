@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DESAFIO</h1>
+
+    <p>
+        Dado um array qualquer, mostre em um alert um boolean indicando se encontrou um dos seguintes valores nesse array: null, undefined ou NaN
+    </p>
+
+    <script>
+        let weirdArray = [0,1,"2",NaN,"3","yes",null,"no", true, false, undefined];
+        let nanNullUndefinedFounder = false;
+
+        for(let i = 0; i <= (weirdArray.length - 1); i++) {
+            if(weirdArray[i] === null || weirdArray[i] === NaN || weirdArray[i] === undefined) {
+                nanNullUndefinedFounder = true;
+                break;
+            }
+        }
+
+        alert(nanNullUndefinedFounder);
+    </script>
+</body>
+</html>
