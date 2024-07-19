@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VAMOS RESOLVER UM PROBLEMA?</h1>
+
+    <p>
+        Dado o seguinte objeto:
+    </p>
+    <p>
+        const carro = { <br>
+            modelo: "Uno", <br>
+            ano: 2023, <br>
+            km: 10000, <br>
+            combustivel: "gasolina", <br>
+            litrosConsumidos: 625 <br>
+        };
+    </p>
+
+    <p>Mostre a seguinte mensagem na tela: "O carro Uno 2023 fez em média xxx Km/L de gasolina</p>
+
+    <script>
+        const carro = {
+            modelo: "Uno",
+            ano: 2023,
+            km: 10000,
+            combustivel: "gasolina",
+            litrosConsumidos: 625
+        };
+
+        let kmPerLiter = carro.km / carro.litrosConsumidos;
+
+        document.write(`O carro ${carro.modelo} ${carro.ano} fez em média ${kmPerLiter.toFixed(2)} Km/L de ${carro.combustivel}`);
+    </script>
+</body>
+</html>
