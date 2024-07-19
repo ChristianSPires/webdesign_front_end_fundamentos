@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>VAMOS RESOLVER UM PROBLEMA?</h1>
+
+    <p>
+        Mostrar na tela os dados de um produto específico que estão agrupado num único objeto. Os dados que devem ser mostrados são: nome, preço e quantidade em estoque.
+    </p>
+
+    <script>
+        let estojo = {
+            nome: "estojo",
+            preco: 15.5,
+            qtdEstoque: 5
+        };
+
+        document.write(`${estojo.nome} custa R$${estojo.preco} e há ${estojo.qtdEstoque} unidades em estoque <br>`); //Interpolation
+        document.write(estojo.nome + "<br>");
+        document.write(estojo.preco + "<br>");
+        document.write(estojo.qtdEstoque);
+    </script>
+</body>
+</html>
