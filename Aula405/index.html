@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>VAMOS RESOLVER UM PROBLEMA?</p>
+
+    <p>Dado os seguintes objetos:</p>
+
+    <p>Mostre no console todas as propriedades do objeto pessoa</p>
+
+    <script>
+        const endereco = {
+            rua: "Rua das Tulias",
+            numero: 302,
+        };
+        const pessoa = {
+            nome: "João",
+            sobrenome: "Fagundes",
+            endereco
+        };
+
+        document.write(`Ficha de ${pessoa.nome}<br>`);
+        document.write(`Nome completo: ${pessoa.nome} ${pessoa.sobrenome}<br>`);
+        document.write(`Rua: ${pessoa.endereco.rua}<br>`);
+        document.write(`Numero: ${pessoa.endereco.numero}`);
+
+        //loop for .. in serve para interagir com o objeto
+        for(let prop in pessoa) {
+            console.log(prop);
+            console.log(pessoa[prop]);
+        }
+
+    </script>
+</body>
+</html>
