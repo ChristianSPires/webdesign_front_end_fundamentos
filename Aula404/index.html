@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>VAMOS RESOLVER UM PROBLEMA?</p>
+
+    <p>Mostre na tela onde o João mora</p>
+
+    <script>
+        const endereco = {
+            rua: "Rua das Tulias",
+            numero: 302,
+        };
+        const pessoa = {
+            nome: "João",
+            sobrenome: "Fagundes",
+            endereco
+        };
+
+        document.write(`${pessoa.nome} mora na rua ${pessoa.endereco.rua} na casa de número ${pessoa.endereco.numero}`)
+    </script>
+</body>
+</html>
