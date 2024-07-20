@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>VAMOS RESOLVER UM PROBLEMA?</p>
+    <p>Dados os seguintes objetos:</p>
+    <p>Adicione uma propriedade chamada endereço em pessoa que "aponte" para o objeto endereco</p>
+
+    <script>
+        const endereco = {
+            rua : "Rua das Tulias",
+            numero : 302,
+        };
+
+        const pessoa = {
+            nome : "Joao",
+            sobrenome : "Fagundes",
+            endereco,
+        };
+
+        console.log(pessoa.endereco.rua);
+    </script>
+</body>
+</html>
