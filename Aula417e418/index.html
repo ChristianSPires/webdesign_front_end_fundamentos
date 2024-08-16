@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+
+        let resp = "";
+        let sum = 0;
+        const alunos = [
+            {
+                nome: "Christian",
+                notas: [1,3,3,8],
+            },
+            {
+                nome: "Gabriela",
+                notas: [10,6,3,2],
+            },
+        ]
+        const output = document.getElementById('output');
+        for(let i = 0; i < alunos.length; i++) {
+            let sum = 0;
+            resp += "<li>" + alunos[i].nome + ", média "
+            for(let j = 0; j < alunos[i].notas.length; j++) {
+                sum += alunos[i].notas[j];
+            }
+            let media = sum/alunos[i].notas.length;
+            resp += media.toFixed(2) + "</li>";
+        }
+
+        output.innerHTML = resp;
+
+    </script>
+</body>
+</html>
