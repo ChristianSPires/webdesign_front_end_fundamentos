@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in tables</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table,th,td {
+            border: 1px solid black;
+        }
+
+        th,td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade em Estoque</th>
+            </tr>
+        </thead>
+        <tbody id="tableProducts"></tbody>
+    </table>
+
+    <script>
+
+        const produtos = [
+            {nome: "Amaciante", preco: 12.99, qtdEstoque: 12},
+            {nome: "Chester", preco: 15.9, qtdEstoque: 15},
+            {nome: "Shampoo", preco: 18.99, qtdEstoque: 18},
+        ]
+
+        const tableProducts = document.getElementById('tableProducts');
+
+        for(let i = 0; i < produtos.length; i ++) {
+            tableProducts.innerHTML +=
+            `<tr>
+                <td>${produtos[i].nome}</td>
+                <td>R$ ${produtos[i].preco.toFixed(2)}</td>
+                <td>${produtos[i].qtdEstoque}</td>
+            </tr>`
+        }
+
+    </script>
+</body>
+</html>
