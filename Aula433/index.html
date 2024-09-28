@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Círculo</title>
+  </head>
+  <body>
+    <h1>Calcular área do círculo</h1>
+
+    <label>
+      Raio:
+      <input type="number" id="raio" placeholder="Digite o raio" />
+    </label>
+    <button id="btnPromptAlert">Calcular com Prompt e mostrar no alert</button>
+    <button id="btnPromptOutput">
+      Calcular com Prompt e mostrar no output
+    </button>
+    <button id="btnInputAlert">Calcular com Input e mostrar no alert</button>
+    <button id="btnInputOutput">Calcular com Input e mostrar no output</button>
+    <output id="output"></output>
+
+    <script>
+      document
+        .getElementById("btnPromptAlert")
+        .addEventListener("click", () => calcularArea("prompt", "alert"));
+      document
+        .getElementById("btnPromptOutput")
+        .addEventListener("click", () => calcularArea("prompt", "output"));
+      document
+        .getElementById("btnInputAlert")
+        .addEventListener("click", () => calcularArea("input", "alert"));
+      document
+        .getElementById("btnInputOutput")
+        .addEventListener("click", () => calcularArea("input", "output"));
+
+      const pi = Math.PI;
+
+      function calcularArea(origem, saida) {
+        let raio;
+
+        if (origem === "prompt") {
+          raio = parseFloat(prompt("Digite o raio:"));
+        } else {
+          raio = parseFloat(document.getElementById("raio").value);
+        }
+
+        if (isNaN(raio) || raio <= 0) {
+          alert("Por favor, insira um raio válido.");
+          return;
+        }
+
+        const area = pi * raio ** 2;
+
+        switch (saida) {
+          case "alert":
+            alert(`Área do círculo é: ${area.toFixed(2)}`);
+            break;
+          case "output":
+            document.getElementById(
+              "output"
+            ).innerHTML = `<br>Área do círculo é: ${area.toFixed(2)}`;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

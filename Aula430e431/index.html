@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Círculo</title>
+</head>
+<body>
+    <h1>Calcular área do círculo</h1>
+
+    <label>Raio:
+        <input type="number" id="raio" placeholder="Digite o raio">
+    </label>
+    <button id="btnPrompt">Calcular com Prompt</button>
+    <button id="btnInput">Calcular com Input</button>
+    <output id="output"></output>
+
+    <script>
+        document.getElementById("btnPrompt").addEventListener("click", calcularAreaPrompt);
+        document.getElementById("btnInput").addEventListener("click", calcularAreaInput);
+
+        const pi = Math.PI;
+
+        function calcularAreaPrompt() {
+            let raio = parseFloat(prompt("Digite o raio:"));
+            if (isNaN(raio) || raio <= 0) {
+                alert("Por favor, insira um número válido para o raio.");
+            } else {
+                calcularArea(raio);
+            }
+        }
+
+        function calcularAreaInput() {
+            const raio = parseFloat(document.getElementById("raio").value);
+            if (isNaN(raio) || raio <= 0) {
+                alert("Por favor, insira um número válido para o raio.");
+            } else {
+                calcularArea(raio);
+            }
+        }
+
+        function calcularArea(raio) {
+            const area = pi * (raio ** 2);
+            document.getElementById("output").innerHTML = `<br>Área do círculo é: ${area.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
