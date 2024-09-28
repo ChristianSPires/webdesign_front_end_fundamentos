@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 3</title>
+  </head>
+  <body>
+    <script>
+      function isEven(n1) {
+        if (isNaN(n1) || !Number.isInteger(n1)) {
+          return "The value must be an integer number.";
+        }
+
+        return n1 % 2 === 0 ? "Is Even" : "Is Odd";
+      }
+
+      console.log(isEven(4));
+      console.log(isEven(5));
+      console.log(isEven(4.5));
+      console.log(isEven("abc"));
+    </script>
+  </body>
+</html>
