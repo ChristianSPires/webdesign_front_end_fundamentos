@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 2</title>
+  </head>
+  <body>
+    <script>
+      function calcular(n1, n2, operation) {
+        if (isNaN(n1) || isNaN(n2)) {
+          return "Os valores fornecidos devem ser números.";
+        }
+
+        switch (operation) {
+          case "+":
+            return n1 + n2;
+          case "-":
+            return n1 - n2;
+          case "*":
+            return n1 * n2;
+          case "/":
+            if (n2 === 0) {
+              return "Erro: Divisão por zero.";
+            }
+            return n1 / n2;
+          default:
+            return "Operação inválida. Use +, -, * ou /.";
+        }
+      }
+
+      // Exemplos de uso:
+      console.log(calcular(10, 5, "+"));
+      console.log(calcular(10, 0, "/"));
+      console.log(calcular(10, 5, "x"));
+    </script>
+  </body>
+</html>
